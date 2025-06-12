@@ -1,0 +1,97 @@
+/* Definición de variables CSS para colores */
+:root {
+    --primary-color: #ff0000; /* Color primario (rojo) */
+    --secondary-color: #000000; /* Color secundario (negro) */
+    --accent-color: #ffffff; /* Color de acento (blanco) */
+    --background-color: #f0f0f0; /* Color de fondo (gris claro) */
+    --text-color: #333333; /* Color del texto (gris oscuro) */
+}
+
+/* Reseteo de márgenes y padding, y configuración del box-sizing */
+* {
+    margin: 0; /* Eliminar márgenes por defecto */
+    padding: 0; /* Eliminar padding por defecto */
+    box-sizing: border-box; /* Incluir padding y border en el ancho y alto total */
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente principal */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+    color: var(--text-color); /* Color del texto */
+    background-color: var(--background-color); /* Color de fondo */
+    display: flex; /* Usar flexbox para el layout */
+    flex-direction: column; /* Colocar elementos en columna */
+    min-height: 100vh; /* Asegurar que el cuerpo ocupe al menos la altura de la ventana */
+}
+
+/* Estilos del encabezado */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); /* Fondo con degradado */
+    color: var(--accent-color); /* Color del texto en el encabezado */
+    padding: 1rem 0; /* Espaciado vertical */
+    position: fixed; /* Fijar el encabezado en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para el encabezado */
+}
+
+/* Estilos de la navegación */
+nav {
+    display: flex; /* Usar flexbox para la navegación */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Alinear verticalmente */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 2rem; /* Espaciado horizontal */
+}
+
+/* Estilos del logo */
+.logo {
+    display: flex; /* Usar flexbox para el logo */
+    align-items: center; /* Alinear verticalmente */
+    font-size: 1.5rem; /* Tamaño de fuente del logo */
+    font-weight: bold; /* Negrita para el logo */
+}
+
+#logo {
+    width: 40px; /* Ancho del logo */
+    height: 40px; /* Alto del logo */
+    margin-right: 10px; /* Espaciado a la derecha del logo */
+    border-radius: 50%; /* Hacer el logo circular */
+}
+
+/* Estilos de la lista de navegación */
+nav ul {
+    display: flex; /* Usar flexbox para la lista */
+    list-style: none; /* Eliminar viñetas */
+}
+
+nav ul li {
+    margin-left: 1.5rem; /* Espaciado a la izquierda de cada elemento de la lista */
+}
+
+/* Estilos de los enlaces de navegación */
+nav ul li a {
+    color: var(--accent-color); /* Color de los enlaces */
+    text-decoration: none; /* Eliminar subrayado */
+    transition: all 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto hover para los enlaces */
+nav ul li a:hover {
+    color: var(--accent-color); /* Color al pasar el ratón */
+    opacity: 0.8; /* Efecto de opacidad al pasar el ratón */
+}
+
+/* Estilos del contenido principal */
+.main {
+    flex: 1; 
+    margin-top: 80px; /* Corrected from margin-top; */
+    padding: 2rem; /* Corrected from padding; */
+    max-width: 1200px; /* Added missing semicolon */
+    width: 100%; 
+    margin-left: auto; 
+    margin-right: auto; 
+}

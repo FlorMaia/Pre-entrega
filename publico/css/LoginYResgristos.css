@@ -1,0 +1,90 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(135deg, hsl(0, 100%, 48%) 0%, #000000 100%);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #ff0000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #ff0000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+}
+
+th {
+    background-color: #ff0000;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+.boton {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #e6001b;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #0b3769bb;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+ /* Estilos para el logo */
+ .logo {
+    position: absolute;
+    top: -10px; /* Ajusta según sea necesario */
+    left: 30px; /* Ajusta según sea necesario */
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+}

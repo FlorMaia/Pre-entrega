@@ -1,0 +1,174 @@
+/* styles.css */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e42323;
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 15px 20px; /* Aumenta el padding para un mejor aspecto */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+/* Estilos para botones */
+button {
+    background-color: #ff0000; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+}
+
+button:hover {
+    background-color: #000000; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+button:active {
+    transform: translateY(0); /* Regresa a la posición original al hacer clic */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra más sutil al hacer clic */
+}
+
+
+header .logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+header ul li a:hover {
+    color: #FFD700; /* Color dorado al pasar el mouse */
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.dashboard h2 {
+    margin-bottom: 20px;
+    color: #1b0909; /* Color más oscuro para el título */
+    font-size: 2em; /* Aumenta el tamaño del título */
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 8px; /* Bordes más redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Transición para el hover */
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    color: #000000; /* Color azul para los títulos de las tarjetas */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px; /* Aumenta el padding para celdas */
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold; /* Negrita para los encabezados */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color de fondo alternativo para filas */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0; /* Aumenta el padding */
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Sombra superior para el pie de página */
+}
+
+footer p {
+    margin: 10px 0 0; /* Espaciado para el texto del pie de página */
+}
+/* Estilos para el logo */
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el logo y el título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+header .logo img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 10px; /* Espaciado entre el logo y el título */
+}
+
+/* Estilos para el botón de volver */
+#backBtn {
+    background-color: #ff000d;
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#backBtn:hover {
+    background-color: #000000; /* Color más oscuro al pasar el mouse */
+}

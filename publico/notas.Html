@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín Digital - Mis Notas</title>
+    <link rel="stylesheet" href="css/LoginYResgristos.css">
+    <style>
+        .notas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .notas-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgb(129, 69, 69);
+            box-shadow: 0 2px 4px rgba(255, 249, 249, 0.1);
+        }
+        .notas-table th,
+        .notas-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ffffff;
+        }
+        .notas-table th {
+            background-color: #fc0000;
+            font-weight: bold;
+        }
+        .notas-table tr:hover {
+            background-color: #000000;
+        }
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .logout-btn:hover {
+            background-color: #ff0019;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .card-title {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .aprobado {
+            color: #28a745;
+        }
+        .desaprobado {
+            color: #dc3545;
+        }
+        .no-notas {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .no-notas i {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Boletín Digital</h1>
+            <div class="user-info">
+                <span id="nombreUsuario"></span>
+                <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="notas-container">
+        <div class="card">
+            <h2 class="card-title">Mis Notas</h2>
+            
+            <!-- Tabla de Notas -->
+            <table class="notas-table">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>1er Informe</th>
+                        <th>2do Informe</th>
+                        <th>1er Cuatrimestre</th>
+                        <th>3er Informe</th>
+                        <th>4to Informe</th>
+                        <th>2do Cuatrimestre</th>
+                        <th>Nota Final</th>
+                    </tr>
+                </thead>
+                <tbody id="notasTableBody">
+                    <!-- Las notas se cargarán aquí dinámicamente -->
+                </tbody>
+            </table>
+
+            <!-- Mensaje cuando no hay notas -->
+            <div id="noNotas" class="no-notas" style="display: none;">
+                <i>📚</i>
+                <p>No hay notas disponibles</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/notas.js"></script>
+</body>
+</html>
+    
+    

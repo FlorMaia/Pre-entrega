@@ -1,0 +1,335 @@
+/* Importar Montserrat desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #ff0000;
+    --secondary-color: white;
+    --accent-color: #ff5252;
+    --text-dark: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --error-color: #ffeb3b;
+    --success-color: #4caf50;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--secondary-color);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Contenedor del formulario */
+.form-container {
+    background-color: var(--primary-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    color: var(--text-light);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+}
+
+/* Logo */
+.logo {
+    width: 110px;
+    height: auto;
+    margin: 0 auto 1.75rem;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos */
+h2 {
+    margin-bottom: 1.75rem;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 1.75rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Grupos de formulario */
+.form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.85rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 82, 82, 0.2);
+    transform: translateY(-1px);
+}
+
+/* Grupo de contraseñas mejorado */
+.password-container {
+    margin-bottom: 1.75rem;
+}
+
+.password-field {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.password-field label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 0.85rem 3rem 0.85rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.password-field input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 82, 82, 0.2);
+}
+
+/* Contenedor de íconos de contraseña */
+.password-icons {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+/* Ícono para mostrar/ocultar contraseña */
+.toggle-password {
+    cursor: pointer;
+    color: #777;
+    font-size: 1.1rem;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.toggle-password:hover {
+    color: var(--text-dark);
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.1);
+}
+
+/* Ícono de seguridad de contraseña */
+.password-security {
+    color: #777;
+    font-size: 1rem;
+    cursor: help;
+    transition: var(--transition);
+}
+
+.password-security:hover {
+    color: var(--text-dark);
+    transform: scale(1.1);
+}
+
+/* Botón de envío mejorado */
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje de error mejorado */
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    display: none;
+    font-weight: 500;
+    text-align: left;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Indicador de fortaleza de contraseña mejorado */
+.password-strength {
+    height: 5px;
+    background: #eee;
+    margin-top: 0.75rem;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.password-strength::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff5252, #ff9800, #4caf50);
+    transition: var(--transition);
+    border-radius: 3px;
+}
+
+.password-strength-text {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 0.25rem;
+    text-align: right;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Efecto de carga en botón */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading .submit-btn {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.loading .submit-btn::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 0.75rem;
+    }
+}
